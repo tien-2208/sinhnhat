@@ -1941,10 +1941,10 @@ export const Stage2Game2D: React.FC<Stage2Game2DProps> = ({
         </button>
       )}
 
-      {/* On-Screen D-Pad Movement Controller (Trong suốt, không che sàn game) */}
+      {/* On-Screen D-Pad Movement Controller (Đưa ra giữa & nâng cao lên để không bị khuất nút Xuống trên mobile) */}
       {ceremonyStep === 'none' && !isGameOver && (
-        <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-30 pointer-events-auto flex flex-col items-center select-none">
-          <div className="grid grid-cols-3 gap-1.5 p-2 rounded-3xl bg-slate-950/20 backdrop-blur-[2px] border border-white/10 shadow-lg">
+        <div className="absolute bottom-10 sm:bottom-12 left-1/2 -translate-x-1/2 z-30 pointer-events-auto flex flex-col items-center select-none pb-[env(safe-area-inset-bottom,0px)]">
+          <div className="grid grid-cols-3 gap-1.5 p-2 rounded-3xl bg-slate-950/35 backdrop-blur-md border border-white/20 shadow-2xl">
             {/* Row 1 */}
             <div />
             <button
@@ -1956,7 +1956,7 @@ export const Stage2Game2D: React.FC<Stage2Game2DProps> = ({
               className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-xl transition-all border active:scale-90 touch-none select-none cursor-pointer ${
                 dpadState.up
                   ? 'bg-pink-500/40 text-white border-pink-400 shadow-md shadow-pink-500/40 scale-95'
-                  : 'bg-black/15 text-white/70 border-white/20 hover:bg-white/10 hover:text-white hover:border-white/40'
+                  : 'bg-black/25 text-white/80 border-white/25 hover:bg-white/10 hover:text-white hover:border-white/40'
               }`}
               aria-label="Đi Lên"
             >
@@ -1974,14 +1974,14 @@ export const Stage2Game2D: React.FC<Stage2Game2DProps> = ({
               className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-xl transition-all border active:scale-90 touch-none select-none cursor-pointer ${
                 dpadState.left
                   ? 'bg-pink-500/40 text-white border-pink-400 shadow-md shadow-pink-500/40 scale-95'
-                  : 'bg-black/15 text-white/70 border-white/20 hover:bg-white/10 hover:text-white hover:border-white/40'
+                  : 'bg-black/25 text-white/80 border-white/25 hover:bg-white/10 hover:text-white hover:border-white/40'
               }`}
               aria-label="Sang Trái"
             >
               ◀
             </button>
 
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-black/10 border border-white/10 flex items-center justify-center text-lg sm:text-xl opacity-60">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-black/20 border border-white/15 flex items-center justify-center text-lg sm:text-xl opacity-75">
               🐷
             </div>
 
@@ -1994,7 +1994,7 @@ export const Stage2Game2D: React.FC<Stage2Game2DProps> = ({
               className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-xl transition-all border active:scale-90 touch-none select-none cursor-pointer ${
                 dpadState.right
                   ? 'bg-pink-500/40 text-white border-pink-400 shadow-md shadow-pink-500/40 scale-95'
-                  : 'bg-black/15 text-white/70 border-white/20 hover:bg-white/10 hover:text-white hover:border-white/40'
+                  : 'bg-black/25 text-white/80 border-white/25 hover:bg-white/10 hover:text-white hover:border-white/40'
               }`}
               aria-label="Sang Phải"
             >
@@ -2012,7 +2012,7 @@ export const Stage2Game2D: React.FC<Stage2Game2DProps> = ({
               className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-xl transition-all border active:scale-90 touch-none select-none cursor-pointer ${
                 dpadState.down
                   ? 'bg-pink-500/40 text-white border-pink-400 shadow-md shadow-pink-500/40 scale-95'
-                  : 'bg-black/15 text-white/70 border-white/20 hover:bg-white/10 hover:text-white hover:border-white/40'
+                  : 'bg-black/25 text-white/80 border-white/25 hover:bg-white/10 hover:text-white hover:border-white/40'
               }`}
               aria-label="Đi Xuống"
             >
@@ -2022,7 +2022,7 @@ export const Stage2Game2D: React.FC<Stage2Game2DProps> = ({
           </div>
 
           {/* Desktop keyboard hint */}
-          <div className="hidden sm:block mt-1.5 px-2 py-0.5 rounded-full bg-black/20 border border-white/10 text-[10px] text-white/50 font-medium">
+          <div className="hidden sm:block mt-1.5 px-2.5 py-0.5 rounded-full bg-black/40 border border-white/15 text-[10px] text-white/60 font-medium backdrop-blur-sm">
             WASD hoặc Phím mũi tên
           </div>
         </div>
