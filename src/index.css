@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes floatUp {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 0) scale(0.8);
+    }
+    20% {
+      opacity: 1;
+      transform: translate(-50%, -20px) scale(1.1);
+    }
+    80% {
+      opacity: 1;
+      transform: translate(-50%, -60px) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -85px) scale(0.9);
+    }
+  }
+
+  .animate-float-up {
+    animation: floatUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: #0b0514;
+}

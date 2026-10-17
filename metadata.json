@@ -1,0 +1,8 @@
+{
+  "name": "Remix Nhật Catch \u0026 Slay - Sinh Nhật Rực Rỡ 1000 Điểm",
+  "description": "Game 3D hứng đồ vật hài hước độc quyền mừng sinh nhật bé bot Nhật: điều khiển bé heo hứng đồ chuẩn gu, né NYC và chuối 9cm để đạt 1000 điểm nhận bánh kem!",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
